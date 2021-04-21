@@ -1,25 +1,40 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Article from './components/article/Article';
+import Banner from './components/banner/Banner';
+import Section from './components/section/Section';
+import bridge4 from './images/bridge4.jpeg';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+    let pStyle = {
+        padding: '20px 10px',
+        backgroundColor: 'green',
+        color: '#fff'
+    }
+
+    const imageOne = "https://cdn.getyourguide.com/img/location/54007c07284a6.jpeg/88.jpg";
+
+    const imageTwo = 'http://www.sensimainsp.com/images/bridge1.jpg';
+
+    return (
+        <>
+            <div className="hasan">
+                <h1 style={{ color: 'red', fontSize: '40px', textAlign: 'center' }}>Hello World</h1>
+                
+                <p style={pStyle}>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <Banner bannerImageSrc={imageOne} greeting="Hello World"/>
+            <Banner bannerImageSrc={imageTwo} greeting="Hey guys" />
+            <Banner />
+            <Section />
+            <Banner bannerImageSrc={bridge4} />
+            <Article />
+          
+        </>
+
+    );
 }
 
 export default App;
